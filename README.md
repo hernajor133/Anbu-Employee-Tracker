@@ -25,9 +25,6 @@ Jordi Hernandez
 ### GitHub
 [GitHub](https://github.com/hernajor133/Anbu-Employee-Tracker.git) 
 
-## License 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [This application is licensed under MIT](https://opensource.org/licenses/MIT)
 ## User_Story
 
 ```md
@@ -64,3 +61,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 ## Screenshots
 ![Screenshot1]()
 ![Screenshot2]()
+
+## License 
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [This application is licensed under MIT](https://opensource.org/licenses/MIT)
