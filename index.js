@@ -23,19 +23,20 @@ async function askFirstQuestion() {
         }
     ])
         const response = list.choice;
-        if (response == 'View departments') {
+        if (response == 'View all departments') {
+            console.log("YOOOO")
             viewAllDepartments();
-        } else if (response == 'View roles') {
+        } else if (response == 'View all roles') {
             viewAllRoles();
-        } else if (response == 'View employees') {
+        } else if (response == 'View all employees') {
             viewAllEmployees();
-        } else if (response == 'Add department') {
+        } else if (response == 'Add a department') {
             addDepartment();
-        } else if (response == 'Add role') {
+        } else if (response == 'Add a role') {
             addRole();
-        } else if (response == 'Add employee') {
+        } else if (response == 'Add an employee') {
             addEmployee();
-        } else if (response == 'Update employee role') {
+        } else if (response == 'Update an employee role') {
             updateEmployee();
         };
 };
@@ -81,11 +82,11 @@ async function addDepartment() {
         [
             {
             type: "input",
-            message: "Enter department name to add.",
+            message: "Enter department name you wish to add.",
             name: "department",
                 validate: function (answer) {
                     if (answer.length < 3) {
-                        return console.log("Enter a department name you'd like to add.");
+                        return console.log("Please enter a department name you'd like to add.");
                     }
                     return true;
                 }
@@ -112,34 +113,34 @@ async function addRole() {
         [
             {
                 type: "input",
-                message: "Enter job title of new role.",
+                message: "Enter the job title of the new role.",
                 name: "job_title",
                     validate: function (answer) {
                         if (answer.length < 3) {
-                            return console.log("Enter a role name.");
+                            return console.log("Please enter a role name.");
                         }
                         return true;
                     }
             },
             {
                 type: "input",
-                message: "Enter salary of new role.",
+                message: "Enter the salary of the new role.",
                 name: "salary",
                     validate: function (answer) {
                         if (answer.length < 3) {
-                            return console.log("Enter role's salary.");
+                            return console.log("Please enter this role's salary.");
                         }
                         return true;
                     }
             },
             {
                 type: "list",
-                message: "Select department for role.",
+                message: "Select a department for this role.",
                 choices: departmentList,
                 name: "department_id",
                     validate: function (answer) {
                         if (!answer) {
-                            return console.log("Select the role's department.");
+                            return console.log("Please select the role's department.");
                         }
                         return true;
                     }
@@ -180,46 +181,46 @@ async function addEmployee() {
         [
             {
                 type: "input",
-                message: "Enter employee's first name.",
+                message: "Enter the employee's first name.",
                 name: "first_name",
                     validate: function (answer) {
                         if (answer.length < 2) {
-                            return console.log("Enter first name.");
+                            return console.log("Please enter a first name.");
                         }
                         return true;
                     }
             },
             {
                 type: "input",
-                message: "Enter employee's last name.",
+                message: "Enter the employee's last name.",
                 name: "last_name",
                     validate: function (answer) {
                         if (answer.length < 2) {
-                            return console.log("Enter last name.");
+                            return console.log("Please enter a last name.");
                         }
                         return true;
                     }
             },
             {
                 type: "list",
-                message: "Select role for employee.",
+                message: "Select a role for this employee.",
                 choices: roleList,
                 name: "role_id",
                     validate: function (answer) {
                         if (!answer) {
-                            return console.log("Select employee's role.");
+                            return console.log("Please select the employee's role.");
                         }
                         return true;
                     }
             },
             {
                 type: "list",
-                message: "Select department for employee.",
+                message: "Select a department for this employee.",
                 choices: departmentList,
                 name: "department_id",
                     validate: function (answer) {
                         if (!answer) {
-                            return console.log("Select employee's department.");
+                            return console.log("Please select the employee's department.");
                         }
                         return true;
                     }
@@ -231,7 +232,7 @@ async function addEmployee() {
                 name: "manager_id",
                     validate: function (answer) {
                         if (!answer) {
-                            return console.log("Select manager's name.");
+                            return console.log("Please select a manager's name.");
                         }
                         return true;
                     }
@@ -267,24 +268,24 @@ async function updateEmployee() {
         [
             {
                 type: "list",
-                message: "Choose employee to update.",
+                message: "Choose the employee you'd like to update.",
                 choices: employeesList,
                 name: "employee_id",
                     validate: function (answer) {
                         if (answer.length < 3) {
-                            return console.log("Please choose employee to update.");
+                            return console.log("Please choose the employee you'd like to update.");
                         }
                         return true;
                     }
                 },
             {
             type: "list",
-            message: "Please choose new role.",
+            message: "Please choose the employee's new role.",
             choices: roleList,
             name: "role_id",
                 validate: function (answer) {
                     if (answer.length < 3) {
-                        return console.log("Please choose new role.");
+                        return console.log("Please choose the employee's new role.");
                     }
                     return true;
                 }
