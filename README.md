@@ -56,11 +56,11 @@ THEN I am prompted to select an employee to update and their new role and this i
 ```
 
 ## Video
-[Video]()
+[Video](https://drive.google.com/file/d/11rbmzqLCzb9dSMP_MLTRO7gMjMU6-Bs1/view)
 
 ## Screenshots
-![Screenshot1]()
-![Screenshot2]()
+![Screenshot](./img/Employee-Tracker.png)
+
 
 ## License 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
